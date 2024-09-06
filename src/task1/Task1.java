@@ -14,22 +14,21 @@ public class Task1 {
      * @param args the command line arguments
      */
    public static void main(String[] args) {
+       /*jadi untuk mencari semua kemunkinan saya harus menggunakan perulangan bersarang ini.
+4 slot untuk setiap tempat angka disini jadi disini saya hanya perlu 4 loop.
+dengan syarat lanjut jika setiap angkanya sudah digunakan..
+       dimulai dengan mencari semua kemungkinan angka pertama sebagai angka pertama
+       lalu lanjut angka kedua dan seterusnya..<>
+*/
         System.out.println("program menyusun semua susunan yang mungkin dari 1234");
-        // Loop untuk semua kemungkinan angka pertama
+
         for (int i = 1; i <= 4; i++) {
-            // Loop untuk semua kemungkinan angka kedua
             for (int j = 1; j <= 4; j++) {
-                if (j == i) continue; // Lewati jika angkanya sudah digunakan
-
-                // Loop untuk semua kemungkinan angka ketiga
+                if (j == i) continue; 
                 for (int k = 1; k <= 4; k++) {
-                    if (k == i || k == j) continue; // Lewati jika angkanya sudah digunakan
-
-                    // Loop untuk semua kemungkinan angka keempat
+                    if (k == i || k == j) continue; 
                     for (int l = 1; l <= 4; l++) {
-                        if (l == i || l == j || l == k) continue; // Lewati jika angkanya sudah digunakan
-
-                        // Cetak hasil permutasi
+                        if (l == i || l == j || l == k) continue; 
                         System.out.println(i + "" + j + "" + k + "" + l);
                     }
                 }
