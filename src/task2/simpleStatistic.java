@@ -60,7 +60,7 @@ public class simpleStatistic {
                 double mean = sum / lenght;
                 System.out.println("Rata-rata: " + mean);
                 break;
-                
+
             case 2:
 
                 System.out.print("Jumlah Angka yang disimpan : ");
@@ -86,42 +86,78 @@ public class simpleStatistic {
                         input.next();
                     }
                 }
-        
-                    Arrays.sort(arr1);
-                   
-                        System.out.println(Arrays.toString(arr1));
-                    
-                
 
-                    // Calculate median
-                    if (arr1.length % 2 != 0) {
-                        // Odd-length array: median is the middle element
-                        System.out.println("Median: " + arr1[arr1.length / 2]);
-                    } else {
-                        // Even-length array: median is the average of the two middle elements
-                        int middle1 = arr1.length / 2;
-                        int middle2 = middle1 - 1;
-                        System.out.println("Median: " + ((arr1[middle1] + arr1[middle2]) / 2.0));
+                Arrays.sort(arr1);
+
+                System.out.println(Arrays.toString(arr1));
+
+                // Calculate median
+                if (arr1.length % 2 != 0) {
+                    // Odd-length array: median is the middle element
+                    System.out.println("Median: " + arr1[arr1.length / 2]);
+                } else {
+                    // Even-length array: median is the average of the two middle elements
+                    int middle1 = arr1.length / 2;
+                    int middle2 = middle1 - 1;
+                    System.out.println("Median: " + ((arr1[middle1] + arr1[middle2]) / 2.0));
+                }
+
+                input.close();
+
+                break;
+            case 3:
+                System.out.print("Jumlah Angka yang disimpan : ");
+                int lenghtmod = input.nextInt();
+                int[] arrmod = new int[lenghtmod];
+                System.out.println("Masukan angka 0 - 1000");
+                for (int i = 0; i < arrmod.length; i++) {
+                    try {
+                        int value = input.nextInt();
+
+                        if (value < 0 || value > 1000) {
+                            throw new IllegalArgumentException();
+                        }
+
+                        arrmod[i] = value;
+
+                    } catch (IllegalArgumentException e) {
+                        System.out.println("Input diluar batas, element akan diisi dengan -1");
+                        arrmod[i] = -1;
+                    } catch (Exception e) {
+                        System.out.println("Anda tidak memasukkan bilangan, element akan diisi dengan -1");
+                        arrmod[i] = -1;
+                        input.next();
+                    }
+                }
+                Arrays.sort(arrmod);
+                int maxCount = 0;
+                int maxValue = 0;
+
+                for (int i = 0; i < arrmod.length; i++) {
+                    int count = 0;
+                    for (int j = 0; j < arrmod.length; j++) {
+                        if (arrmod[i] == arrmod[j]) {
+                            ++count;
+                        }
+
                     }
 
-                    input.close();
-                    
+                    if (count > maxCount) {
+                        maxCount = count;
+                        maxValue = arrmod[i];
+                    }
+
+                }
+                System.out.println("Modus : " + maxValue);
+                input.close();
                 break;
-            case 3: 
-                break;
-            default : 
-                break;
+
+            case 4:
+                System.out.println("byebye");
                 
-                
+                input.close();
+                break;
+
         }
     }
 }
-    
-                 
-                    
-                
-        
-       
-    
-
-
