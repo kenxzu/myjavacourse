@@ -28,7 +28,9 @@ dengan syarat lanjut jika setiap angkanya sudah digunakan..
                 for (int k = 1; k <= 4; k++) {
                     if (k == i || k == j) continue; 
                     for (int l = 1; l <= 4; l++) {
-                        if (l == i || l == j || l == k) continue; 
+                        
+                        if (l == i || l == j || l == k) continue;
+                        
                         System.out.println(i + "" + j + "" + k + "" + l);
                     }
                 }
