@@ -78,7 +78,7 @@ public class CommisionEmployee extends Object{
         //return commisionRate * grossSales;
         return getCommisionRate() * getCommisionRate();
     }
-    
+        
     @Override
     public String  toString(){
         //ini yang menggunakan protected dan public 

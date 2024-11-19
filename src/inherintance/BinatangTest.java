@@ -26,8 +26,8 @@ public class BinatangTest {
         System.out.println("Kucing");
         Kucing k1 = new Kucing("Cowok", 10, "meow-mweo");
         
-        System.out.println("Nama Kucing : "+k1.getNama());
-        System.out.println("Jumlah Kaki : "+k1.getJumlahKaki());
+        System.out.println("Nama Kucing : " +k1.getNama());
+        System.out.println("Jumlah Kaki : " +k1.getJumlahKaki());
         System.out.println("Suara : "+k1.getSuara());
         k1.setJumlahKaki(10);
         

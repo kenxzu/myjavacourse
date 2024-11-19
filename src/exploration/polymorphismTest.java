@@ -23,6 +23,9 @@ public class polymorphismTest {
         
         
         //superclass dari kommision employee adalah baseplusCommision employee
+        //toString subclass which is BasePlusCommisionMehtod pasti yang terpanggil
+        //The Java compiler allows this “crossover” because an object of a subclass is an object of its superclass (but not vice versa).
+        //At execution time, the type of the object to which the variable refers determines the actual method to use. This process, called dynamic binding.
         CommisionEmployee  commissionEmployee2 = basePlusCommision;
         
         System.out.printf("%s %s : %n%n%n%n", "tostring dari superclass",
